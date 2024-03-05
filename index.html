@@ -1,63 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        #chart-container {
-            padding-top: 10%;
-            width: 20%; /* Adjust width as needed*/
-            margin: auto; 
-        }
-        canvas {
-            width: 100% !important;
-            height: auto !important;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> Font Awesome link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <div class="container">
+        <div class="top-bar">
+            <div class="logo">
+               Student Engagement Analysis
+            </div>
+        </div>
+        <div class="side-bar">
+            <ul>
+                <li>
+                    <a href="#">
+                       <!-- font awesome page -->
+                        <i class="fa-solid fa-user"></i>
+                        <div>Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user-graduate"></i>
+                        <div>Student</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-sharp fa-solid fa-chart-simple"></i>
+                        <div>Analysis</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <!-- Main dashboard will go here -->
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-number">1234</div>
+                        <div class="card-name">Looking Away</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-number">1234</div>
+                        <div class="card-name">Drowzy</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+                <!-- <div class="card">
+                    <div class="card-content">
+                        <div class="card-number">1234</div>
+                        <div class="card-name">Frustated</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div> -->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-number">1234</div>
+                        <div class="card-name">Confused</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-number">1234</div>
+                        <div class="card-name">Bored</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+                <div class="charts">
 
-<div id="chart-container">
-    <canvas id="myChart"></canvas>
-</div>
-
-<script>
-const xValues = ["Engaged", "Not-Engaged", "Drowzy", "Looking - Away", "Frustated"];
-const yValues = [55, 49, 44, 24, 15];
-const barColors = [
-  "#b91d47",
-  "#00aba9",
-  "#2b5797",
-  "#e8c3b9",
-  "#1e7145"
-];
-
-new Chart("myChart", {
-  type: "pie",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    title: {
-      display: true,
-      text: "Student Attentiveness",
-      fontSize: 18
-    },
-    legend: {
-      display: true,
-      position: 'bottom',
-      labels: {
-        fontSize: 14
-      }
-    }
-  }
-});
-</script>
-
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
