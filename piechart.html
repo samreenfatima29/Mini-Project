@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        #chart-container {
+            padding-top: 10%;
+            width: 20%; /* Adjust width as needed*/
+            margin: auto; 
+        }
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+        }
+    </style>
+</head>
+<body>
+
+<div id="chart-container">
+    <canvas id="myChart"></canvas>
+</div>
+
+<script>
+const xValues = ["Engaged", "Not-Engaged", "Drowzy", "Looking - Away", "Frustated"];
+const yValues = [55, 49, 44, 24, 15];
+const barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    title: {
+      display: true,
+      text: "Student Attentiveness",
+      fontSize: 18
+    },
+    legend: {
+      display: true,
+      position: 'bottom',
+      labels: {
+        fontSize: 14
+      }
+    }
+  }
+});
+</script>
+
+</body>
+</html>
